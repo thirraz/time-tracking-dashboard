@@ -11,59 +11,53 @@ import socialIcon from "../assets/images/icon-social.svg";
 import studyIcon from "../assets/images/icon-study.svg";
 import workIcon from "../assets/images/icon-work.svg";
 import { InfosContainer } from "./InfosContainer";
+import { useFetchData } from "../hooks/useFetchData";
 
 export const Daily: FC = () => {
-  const [data, setData] = useState<DataJSON[]>([]);
-
-  useEffect(() => {
-    fetch("http://localhost:5173/src/utils/data.json")
-      .then((r) => r.json())
-      .then((dataResponse) => setData(dataResponse))
-      .catch((e) => console.warn(e));
-  }, []);
+  const { dataResponse } = useFetchData();
 
   const TimeCardComponentObjectArray = [
     {
       imageIcon: `${workIcon}`,
-      title: data[0]?.title,
+      title: dataResponse[0]?.title,
       bgColor: "workCardBg",
-      currentHours: data[0]?.timeframes.daily.current,
-      previousHours: data[0]?.timeframes.daily.previous,
+      currentHours: dataResponse[0]?.timeframes.daily.current,
+      previousHours: dataResponse[0]?.timeframes.daily.previous,
     },
     {
       imageIcon: `${playIcon}`,
-      title: data[1]?.title,
+      title: dataResponse[1]?.title,
       bgColor: "playCardBg",
-      currentHours: data[1]?.timeframes.daily.current,
-      previousHours: data[1]?.timeframes.daily.previous,
+      currentHours: dataResponse[1]?.timeframes.daily.current,
+      previousHours: dataResponse[1]?.timeframes.daily.previous,
     },
     {
       imageIcon: `${studyIcon}`,
-      title: data[2]?.title,
+      title: dataResponse[2]?.title,
       bgColor: "studyCardBg",
-      currentHours: data[2]?.timeframes.daily.current,
-      previousHours: data[2]?.timeframes.daily.previous,
+      currentHours: dataResponse[2]?.timeframes.daily.current,
+      previousHours: dataResponse[2]?.timeframes.daily.previous,
     },
     {
       imageIcon: `${exerciseIcon}`,
-      title: data[3]?.title,
+      title: dataResponse[3]?.title,
       bgColor: "exerciseCardBg",
-      currentHours: data[3]?.timeframes.daily.current,
-      previousHours: data[3]?.timeframes.daily.previous,
+      currentHours: dataResponse[3]?.timeframes.daily.current,
+      previousHours: dataResponse[3]?.timeframes.daily.previous,
     },
     {
       imageIcon: `${socialIcon}`,
-      title: data[4]?.title,
+      title: dataResponse[4]?.title,
       bgColor: "socialCardBg",
-      currentHours: data[4]?.timeframes.daily.current,
-      previousHours: data[4]?.timeframes.daily.previous,
+      currentHours: dataResponse[4]?.timeframes.daily.current,
+      previousHours: dataResponse[4]?.timeframes.daily.previous,
     },
     {
       imageIcon: `${selfCareIcon}`,
-      title: data[5]?.title,
+      title: dataResponse[5]?.title,
       bgColor: "selfCareCardBg",
-      currentHours: data[5]?.timeframes.daily.current,
-      previousHours: data[5]?.timeframes.daily.previous,
+      currentHours: dataResponse[5]?.timeframes.daily.current,
+      previousHours: dataResponse[5]?.timeframes.daily.previous,
     },
   ];
 

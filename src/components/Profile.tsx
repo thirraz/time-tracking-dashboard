@@ -3,34 +3,68 @@ import { FC, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import user from "../assets/images/image-jeremy.png";
+import { Daily } from "./DailyRoute";
+import { Monthly } from "./MonthlyRoute";
+import { Weekly } from "./WeeklyRoute";
 
 export const Profile: FC = () => {
+  const [showDaily, setShowDaily] = useState(false);
+  const [showWeekly, setShowWeekly] = useState(false);
+  const [showMonthly, setShowMonthly] = useState(false);
+
   return (
     <>
-      <article className="w-[90%] h-[13rem] mt-10  relative z-20 bg-indigo-600 rounded-xl">
-        <div className="w-full h-[8rem] bg-red-300 relative rounded-2xl flex justify-center items-center">
+      <article className="w-[90%] h-[13rem] md:w-[18rem] md:h-[30rem] lg:h-[35.7rem] mt-10 md:mt-0 lg:mt-[5.6rem] z-20 bg-indigo-600 rounded-xl ">
+        <div className="w-full h-[8.5rem] md:h-auto bg-sky-600 flex justify-evenly items-center md:items-start md:flex-col md:pl-7 rounded-xl">
           <img
             src={user}
-            alt="user profile pic"
-            className="rounded-full border-2 border-white  w-[4.5rem] h-[4.5rem]"
+            alt="user's profile pic"
+            className="border-4 w-[5rem] h-[5rem] rounded-full md:mt-8 md:mb-4"
           />
-          <div className="ml-5">
-            <h4>Report for</h4>
-            <h3 className="text-xl">Jeremy Robson</h3>
+          <div className="md:mb-[5rem]">
+            <p>Report for</p>
+            <h3 className="text-[1.5rem] md:text-[2.4rem]">Jeremy Robson</h3>
           </div>
         </div>
-        <nav className="text-indigo-300 flex justify-around pt-7 ">
-          <Link to="/daily" className="hover:text-white">
+        <nav className="flex md:flex-col md:py-5  bg-indigo-600 rounded-xl h-[4.5rem] md:h-[9rem] md:items-start md:pl-7 justify-around items-center">
+          <a
+            href="#"
+            className="hover:text-white"
+            onClick={() => {
+              setShowDaily(!showDaily);
+              setShowWeekly(false);
+              setShowMonthly(false);
+            }}
+          >
             Daily
-          </Link>
-          <Link to="/weekly" className="hover:text-white">
+          </a>
+          <a
+            href="#"
+            className="hover:text-white"
+            onClick={() => {
+              setShowDaily(false);
+              setShowWeekly(!showWeekly);
+              setShowMonthly(false);
+            }}
+          >
             Weekly
-          </Link>
-          <Link to="/monthly" className="hover:text-white">
+          </a>
+          <a
+            href="#"
+            className="hover:text-white"
+            onClick={() => {
+              setShowDaily(false);
+              setShowWeekly(false);
+              setShowMonthly(!showMonthly);
+            }}
+          >
             Monthly
-          </Link>
+          </a>
         </nav>
       </article>
+      {showDaily ? <Daily /> : ""}
+      {showWeekly ? <Weekly /> : ""}
+      {showMonthly ? <Monthly /> : ""}
     </>
   );
 };

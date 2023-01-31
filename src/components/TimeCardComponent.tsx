@@ -17,7 +17,7 @@ export const TimeCardComponent = ({
 }: CardItems) => {
   return (
     <div
-      className={`${bgColor} text-white w-[90%] h-[11rem] relative z-20 rounded-xl overflow-hidden border-2 border-green-300 mb-6`}
+      className={`${bgColor} text-white w-[90%] md:w-[15rem] h-[11rem] lg:w-[17rem] lg:h-[17rem] relative z-20 rounded-xl overflow-hidden mb-6`}
     >
       <img
         src={imageIcon}

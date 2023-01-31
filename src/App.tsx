@@ -7,18 +7,12 @@ import { Daily } from "./components/DailyRoute";
 import { Monthly } from "./components/MonthlyRoute";
 import { Weekly } from "./components/WeeklyRoute";
 import { Profile } from "./components/Profile";
+import { InfosContainer } from "./components/InfosContainer";
 
 export const App: FC = () => {
   return (
-    <main className="appBg font-Rubik w-screen h-auto flex items-center justify-center flex-wrap">
-      <BrowserRouter>
-        <Profile />
-        <Routes>
-          <Route path="/daily" element={<Daily />} />
-          <Route path="/weekly" element={<Weekly />} />
-          <Route path="/monthly" element={<Monthly />} />
-        </Routes>
-      </BrowserRouter>
+    <main className="appBg px-2 lg:px-[13rem] font-Rubik w-screen h-screen flex items-center justify-center flex-wrap md:flex-nowrap">
+      <Profile />
     </main>
   );
 };
