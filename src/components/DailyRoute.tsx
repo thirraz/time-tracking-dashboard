@@ -1,5 +1,4 @@
-import { FC, useEffect, useState } from "react";
-import { DataJSON } from "../interfaces/dataJSON";
+import { FC } from "react";
 
 import { TimeCardComponent } from "./TimeCardComponent";
 
@@ -77,49 +76,6 @@ export const Daily: FC = () => {
           );
         })}
       </InfosContainer>
-
-      {/* <TimeCardComponent
-        imageIcon={workIcon}
-        title={data[0]?.title}
-        bgColor="workCardBg"
-        currentHours={data[0]?.timeframes.daily.current}
-        previousHours={data[0]?.timeframes.daily.previous}
-      />
-      <TimeCardComponent
-        imageIcon={workIcon}
-        title={data[1]?.title}
-        bgColor="playCardBg"
-        currentHours={data[0]?.timeframes.daily.current}
-        previousHours={data[0]?.timeframes.daily.previous}
-      />
-      <TimeCardComponent
-        imageIcon={workIcon}
-        title={data[2]?.title}
-        bgColor="studyCardBg"
-        currentHours={data[0]?.timeframes.daily.current}
-        previousHours={data[0]?.timeframes.daily.previous}
-      />
-      <TimeCardComponent
-        imageIcon={workIcon}
-        title={data[3]?.title}
-        bgColor="exerciseCardBg"
-        currentHours={data[0]?.timeframes.daily.current}
-        previousHours={data[0]?.timeframes.daily.previous}
-      />
-      <TimeCardComponent
-        imageIcon={workIcon}
-        title={data[4]?.title}
-        bgColor="socialCardBg"
-        currentHours={data[0]?.timeframes.daily.current}
-        previousHours={data[0]?.timeframes.daily.previous}
-      />
-      <TimeCardComponent
-        imageIcon={workIcon}
-        title={data[5]?.title}
-        bgColor="selfCareCardBg"
-        currentHours={data[0]?.timeframes.daily.current}
-        previousHours={data[0]?.timeframes.daily.previous}
-      /> */}
     </div>
   );
 };

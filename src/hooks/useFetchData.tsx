@@ -7,7 +7,9 @@ export const useFetchData = () => {
   useEffect(() => {
     fetch("http://localhost:5173/src/utils/data.json")
       .then((r) => r.json())
-      .then((dataResponse) => setDataResponse(dataResponse))
+      .then((dataResponse) => {
+        setDataResponse(dataResponse);
+      })
       .catch((e) => console.warn(e));
   }, []);
 
