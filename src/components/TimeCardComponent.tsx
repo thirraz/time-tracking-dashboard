@@ -15,14 +15,14 @@ export const TimeCardComponent = ({
 }: CardItems) => {
   return (
     <div
-      className={`${bgColor} text-white w-[90%] md:w-[13rem] h-[13rem] lg:w-[17rem] lg:h-[17rem] relative z-20 rounded-xl overflow-hidden mb-6`}
+      className={`${bgColor} text-white w-[90%] md:w-[10rem] h-[13rem] lg:w-[15rem] lg:h-[13rem] relative z-20 rounded-xl overflow-hidden mb-6`}
     >
       <img
         src={imageIcon}
         alt="background icon"
-        className="absolute top-[-2%] right-2"
+        className="absolute top-[-5%] md:top-[-2%] right-2"
       />
-      <div className="cardForegroundColor w-full h-[8rem] lg:h-[14.6rem] absolute bottom-[-5%] rounded-xl ">
+      <div className="cardForegroundColor w-full h-[8rem] lg:h-[10rem] absolute bottom-[-5%] rounded-xl ">
         <div className="w-full h-auto flex px-4 justify-between items-center mt-8 md:mt-4">
           <p className="text-[1.2rem] font-bold">{title}</p>
           <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
