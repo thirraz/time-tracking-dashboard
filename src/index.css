@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cardForegroundColor {
+  background-color: hsl(235, 46%, 20%);
+}
+
+.appBg {
+  background-color: hsl(226, 43%, 10%);
+}
+
+.workCardBg {
+  background-color: hsl(15, 100%, 70%);
+}
+
+.playCardBg {
+  background-color: hsl(195, 74%, 62%);
+}
+
+.studyCardBg {
+  background-color: hsl(348, 100%, 68%);
+}
+
+.exerciseCardBg {
+  background-color: hsl(145, 58%, 55%);
+}
+
+.socialCardBg {
+  background-color: hsl(264, 64%, 52%);
+}
+
+.selfCareCardBg {
+  background-color: hsl(43, 84%, 65%);
+}
