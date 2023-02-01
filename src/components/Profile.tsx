@@ -8,7 +8,7 @@ import { Monthly } from "./MonthlyRoute";
 import { Weekly } from "./WeeklyRoute";
 
 export const Profile: FC = () => {
-  const [showDaily, setShowDaily] = useState(false);
+  const [showDaily, setShowDaily] = useState(true);
   const [showWeekly, setShowWeekly] = useState(false);
   const [showMonthly, setShowMonthly] = useState(false);
 
